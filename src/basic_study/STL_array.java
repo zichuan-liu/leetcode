@@ -11,5 +11,7 @@ public class STL_array {
 		int[] nums = { 6, 5, 8, 3, 1, 8, 1, 8, 7 };
 		Arrays.sort(nums); // O(nlogn)
 		System.out.println(Arrays.toString(nums));
+
+		result2.add(1);
 	}
 }
