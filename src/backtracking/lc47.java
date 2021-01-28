@@ -7,7 +7,7 @@ import java.util.List;
 public class lc47 {
 	List<List<Integer>> res = new ArrayList<>();
 
-	public List<List<Integer>> permute(int[] nums) {
+	public List<List<Integer>> permuteUnique(int[] nums) {
 		Arrays.sort(nums);
 		fun(nums, new ArrayList<Integer>());
 
