@@ -9,26 +9,26 @@ public class lc47 {
 
 	public List<List<Integer>> permuteUnique(int[] nums) {
 		Arrays.sort(nums);
-		fun(nums, new ArrayList<Integer>());
-
+		fun(nums, new ArrayList<Integer>(), new boolean[nums.length]);
 		return res;
 	}
 
-	private void fun(int[] nums, ArrayList<Integer> nowlist) {
+	private void fun(int[] nums, ArrayList<Integer> nowlist, boolean[] isnums) {
 		// TODO Auto-generated method stub
 		if (nowlist.size() == nums.length) {
 			res.add(new ArrayList<Integer>(nowlist));
 		}
 		for (int i = 0; i < nums.length; i++) {
-			if (i > 0 && nums[i] == nums[i - 1]) {
+			if (i > 0 && nums[i] == nums[i - 1] && !isnums[i - 1]) {
 				continue;
 			}
-			if (!nowlist.contains(nums[i])) {
+			if (isnums[i] == false) {
 				nowlist.add(nums[i]);
-				fun(nums, nowlist);
+				isnums[i] = true;
+				fun(nums, nowlist, isnums);
 				nowlist.remove(nowlist.size() - 1);
+				isnums[i] = false;
 			}
-
 		}
 	}
 }
