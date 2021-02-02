@@ -52,5 +52,11 @@ int main() {
 	string str1="good";
 	string str2="great";
 	str1.swap(str2);//str1="great";str2="good";
+	
+	
+	//×Ó´®substr
+	str1.substr(0,str1.length());
+	 
+	
 	return 0;
 }
