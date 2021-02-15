@@ -57,6 +57,12 @@ int main() {
 	//子串substr
 	str1.substr(0,str1.length());
 	 
+	 //反转
+	 reverse(str.begin(),str.end());
+ 		
+ 	//字符串变数字
+	   int  x = stoi(str);
+ 
 	
 	return 0;
 }
